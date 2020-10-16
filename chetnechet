@@ -1,0 +1,13 @@
+import random
+chet=0
+
+spisok = [int(random.random()*100000) for i in range(100)]
+for j in spisok:
+    if (j%2!=0):
+        print (j)
+        break
+
+for k in spisok:
+    if (k%2==0):
+        chet = k
+print (k)
