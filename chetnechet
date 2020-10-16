@@ -11,3 +11,8 @@ for k in spisok:
     if (k%2==0):
         chet = k
 print (k)
+
+for i in spisok:
+    if i%10==1:
+        odin.append(i)
+print (odin)
