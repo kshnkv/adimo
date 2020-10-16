@@ -16,3 +16,8 @@ for i in spisok:
     if i%10==1:
         odin.append(i)
 print (odin)
+
+for q in spisok:
+    if (q%2!=0)%(q%3!=0)%(q%5!=0)%(q%7!=0):
+        prost.append(q)
+print (prost)
