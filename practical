@@ -1,0 +1,29 @@
+import random
+
+
+def practic ():
+
+    chet=0
+    odin=[]
+    prost=[] 
+    nechet =0
+    
+    spisok = [int(random.random()*100000) for i in range(100)]
+    for j in spisok:
+        if (j%2!=0):
+            nechet=j     
+            break
+
+    for k in spisok:
+        if (k%2==0):
+            chet = k
+          
+    for i in spisok:
+        if i%10==1:
+            odin.append(i)
+  
+    for q in spisok:
+        if (q%2!=0)&(q%3!=0)&(q%5!=0)&(q%7!=0):
+            prost.append(q)
+   
+    return nechet,chet,prost,odin
