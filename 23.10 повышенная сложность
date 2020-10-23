@@ -1,1 +1,12 @@
+import random
+spisok = [int(random.random()*1000) for i in range(100)]
+spisok.sort(key=lambda x: int(str(x)[0]),reverse=True)
+d=0
+file=open(r'C:\Users\Denis\Desktop\test.txt','w')
+for i in spisok:
+    file.write(str(i))
 
+file.close()
+file=open(r'C:\Users\Denis\Desktop\test.txt','r')
+d=file.read()
+print(d)
