@@ -1,0 +1,5 @@
+piton='lublupython'
+d={}
+for i in piton:
+    d[i]=piton.count(i)
+print(d)
