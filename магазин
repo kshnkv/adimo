@@ -1,0 +1,29 @@
+import random
+ob_zarab=0
+ob_skidka=0
+skidka=0
+oplata=0
+k = random.randint(1,5)
+print('Количество покупателей ',k)
+for i in range(0,k,1):
+    sym = int(input('Введите сумму покупок '))
+    if sym <=1000:
+        print ('Скидки нет')
+        ob_zarab=ob_zarab+sym
+        print ('К оплате', sym,' рублей')
+    elif sym>1000&sym<=3000:
+        skidka=sym/100*10
+        print ('Скидка 10%. Скидка', skidka,' рублей')
+        ob_skidka=ob_skidka+skidka
+        oplata=sym-skidka
+        print ('К оплате', oplata,' рублей')
+        ob_zarab=ob_zarab+oplata
+    elif sym>3000:
+        skidka=sym/100*20
+        print ('Скидка 20%. Скидка', skidka,' рублей')
+        ob_skidka=ob_skidka+skidka
+        oplata=sym-skidka
+        print ('К оплате', oplata,' рублей')
+        ob_zarab=ob_zarab+oplata
+print ('Выручка магазина ',ob_zarab, 'рублей')
+print ( 'Общая суммма предоставленных скидок ',ob_skidka, 'рублей')
