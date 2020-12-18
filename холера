@@ -1,0 +1,17 @@
+import pandas as pd
+df = pd.read_csv('cholera.csv')
+#print (df.columns)
+print (df.shape) # пункт 0
+print (df.tail(10)) # пункт 1
+print (df.head(5)) # пункт 2
+print (df.loc[:, ['region', 'country','total_cases']]) # пункт 3
+print(df.loc[3:12]) # пункт 4
+death = df.loc[:,['deaths']]
+print (death.loc[death.loc[:,'deaths'] >50].count()) # пункт 5
+reg = df.loc[:,['region']]
+azia=(reg.loc[reg.loc[:,'region'] == 'Азия'].count())
+d=33-int(azia)
+if (d<int(azia)):
+    print ('Азиатских стран больше')
+else:
+    print ('Азиатских стран меньше') # пункт 6
