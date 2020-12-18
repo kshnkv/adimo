@@ -10,7 +10,7 @@ death = df.loc[:,['deaths']]
 print (death.loc[death.loc[:,'deaths'] >50].count()) # пункт 5
 reg = df.loc[:,['region']]
 azia=(reg.loc[reg.loc[:,'region'] == 'Азия'].count())
-d=23-int(azia)
+d=len(df)-int(azia)
 if (d<int(azia)):
     print ('Азиатских стран больше')
 else:
